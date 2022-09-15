@@ -1,15 +1,15 @@
 ﻿Console.Clear();
-int m = 8;
-int n = 5;
+int m = 4;
+int n = 4;
 Console.WriteLine(GetPower(m, n));
 Console.WriteLine(GetSum(GetPower(m, n)));
 
-int GetPower(int a, int b, int res = 1, int i = 1)
+int GetPower(int a, int b, int res = 1)
 {
-    if (i <= b)
+    if (b > 0)
     {
         res *= a;
-        return GetPower(a, b, res, i + 1);
+        return GetPower(a, b - 1, res);
     }
     return res;
 }
